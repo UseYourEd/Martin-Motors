@@ -128,11 +128,11 @@ export default function App() {
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 z-0 bg-black">
           <img 
-            src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?auto=format&fit=crop&q=80&w=2000" 
-            alt="Classic VW Bus" 
-            className="w-full h-full object-cover"
+            src="/marty-motors-1.png" 
+            alt="Martin Motors Classic VW Campervan" 
+            className="w-full h-full object-cover md:object-contain object-center opacity-80"
             referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -253,11 +253,11 @@ export default function App() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="relative">
-              <div className="aspect-square rounded-3xl overflow-hidden">
+              <div className="aspect-square rounded-3xl overflow-hidden bg-black/5">
                 <img 
-                  src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?auto=format&fit=crop&q=80&w=1000" 
-                  alt="Workshop" 
-                  className="w-full h-full object-cover"
+                  src="/marty-motors-2.png" 
+                  alt="Martin Motors Workshop and Services" 
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
                 />
               </div>
