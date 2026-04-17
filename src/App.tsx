@@ -396,7 +396,7 @@ export default function App() {
           
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground uppercase tracking-widest">
             <p>© 2024 Martin Motors. All rights reserved.</p>
-            <p>Designed with passion for classic VWs.</p>
+            <p>Website by <a href="https://www.useyoured.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">UseYourEd</a></p>
           </div>
         </div>
       </footer>
