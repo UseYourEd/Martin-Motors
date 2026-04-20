@@ -105,10 +105,8 @@ export default function App() {
           {/* Mobile Nav */}
           <div className="md:hidden">
             <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="icon">
-                  <Menu className="w-6 h-6" />
-                </Button>
+              <SheetTrigger render={<Button variant="ghost" size="icon" />}>
+                <Menu className="w-6 h-6" />
               </SheetTrigger>
               <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                 <nav className="flex flex-col gap-6 mt-12">
