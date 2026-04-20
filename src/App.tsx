@@ -254,8 +254,8 @@ export default function App() {
       {/* About Section */}
       <section id="about" className="py-32 bg-secondary/30 relative overflow-hidden">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-20 items-center">
-            <div className="relative">
+          <div className="grid lg:grid-cols-2 gap-20 items-start mb-24">
+            <div className="relative lg:sticky lg:top-32">
               <div className="aspect-square rounded-3xl overflow-hidden bg-black/5">
                 <img 
                   src={aboutImage} 
@@ -264,43 +264,74 @@ export default function App() {
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-primary rounded-3xl p-8 text-primary-foreground hidden lg:block">
+              <div className="absolute -bottom-10 -right-10 w-64 h-64 bg-primary rounded-3xl p-8 text-primary-foreground hidden lg:flex flex-col justify-center">
                 <Star className="w-10 h-10 mb-6" />
                 <p className="text-xl font-heading font-medium leading-snug">
-                  "The most trusted name in VW restoration across Northern Ireland."
+                  "Over 50 years of combined experience delivering uncompromised excellence."
                 </p>
               </div>
             </div>
             
-            <div>
-              <Badge className="mb-4">Our Story</Badge>
-              <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 leading-tight">
-                A Legacy of Craftsmanship <br /> Since 1976
-              </h2>
-              <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>
-                  Martin Motors was founded with a simple mission: to provide honest, expert mechanical services to the local community. Over the decades, our passion for classic vehicles—particularly the iconic VW campervan—has become our defining specialty.
-                </p>
-                <p>
-                  Today, we are a WHICH Recommended Service Centre, a testament to our commitment to quality and customer satisfaction. Every vehicle that enters our workshop is treated with the same care and attention to detail as if it were our own.
-                </p>
-              </div>
-              
-              <div className="grid grid-cols-2 gap-6 mt-12">
-                {[
-                  "WHICH Recommended",
-                  "Air-Cooled Experts",
-                  "Period Correct Parts",
-                  "Full Warranty"
-                ].map((item, i) => (
-                  <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-primary" />
-                    <span className="font-medium text-foreground">{item}</span>
-                  </div>
-                ))}
+            <div className="space-y-16">
+              <div>
+                <Badge className="mb-4">Our Story</Badge>
+                <h2 className="text-4xl md:text-5xl font-heading font-bold mb-8 leading-tight">
+                  A Father & Son Team <br /> Since 1976
+                </h2>
+                <div className="space-y-6 text-muted-foreground leading-relaxed text-lg">
+                  <p>
+                    MartinMotors is a Newtownards-based Workshop specialising in wide-span vehicle servicing and maintenance. Shane and Marty O'Neill are the father and son team behind our success, continuing to drive the business forward to offer customers the most modern and friendly service available.
+                  </p>
+                  <p>
+                    Established in 1976, the pair share over fifty years of experience between them. Shane trained as a mechanic with the Royal Artillery in Germany and was the Volkswagen foreman for MT Garage in Bangor for many years before branching out on his own. He brought his wealth of experience and knowledge to his new business, bringing Marty on board in later years to build the legacy.
+                  </p>
+                </div>
               </div>
 
-              <Button className="mt-12 rounded-full px-8">Read Our Full History</Button>
+              <div>
+                <h3 className="text-2xl font-heading font-bold mb-6">Philosophy & Mission</h3>
+                <div className="space-y-6 text-muted-foreground leading-relaxed">
+                  <p>
+                    Inspired by core values such as honesty, quality precision in engineering, and craftsmanship, we at MartinMotors strive to ensure our clients' expectations are exceeded in everything we do. This is underlined by our first-class team—this is not merely a job for us, this is what we love doing. 
+                  </p>
+                  <p>
+                    <strong className="text-foreground font-semibold">When passion meets exceptional craftsmanship, satisfaction is guaranteed.</strong>
+                  </p>
+                  <p>
+                    Our mission is to continue to be firmly established as a reliable, value-for-money service provider for local motorists in the Ards and Greater Belfast area. Whether it be a performance upgrade or a regular service, MartinMotors provides the same uncompromising levels of excellence.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <Separator className="my-24 bg-border/50" />
+
+          {/* Why Choose Us & Extra Info */}
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <Badge className="mb-4" variant="outline">The Martin Motors Difference</Badge>
+              <h3 className="text-3xl font-heading font-bold mb-6">What Makes Us Stand Out</h3>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                We take enormous pride in our workshop and immense care with all of our customers' cars. Here is why you can trust you are in good hands:
+              </p>
+            </div>
+            
+            <div className="grid sm:grid-cols-2 gap-6">
+              {[
+                "WHICH Recommended service centre",
+                "Free collection & delivery (MOT prep)",
+                "Free wash and clean with service/MOT",
+                "Female friendly environment",
+                "Free roadside assistance for customers"
+              ].map((item, i) => (
+                <div key={i} className="flex items-center gap-4 p-6 bg-background rounded-2xl border shadow-sm">
+                  <div className="p-1.5 bg-primary/10 rounded-full text-primary shrink-0">
+                    <CheckCircle2 className="w-5 h-5" />
+                  </div>
+                  <span className="font-medium text-foreground leading-snug">{item}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
