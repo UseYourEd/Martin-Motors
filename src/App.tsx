@@ -30,9 +30,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-import heroImage from './assets/marty-motors-1.png';
-import aboutImage from './assets/marty-motors-2.png';
-
 const services = [
   {
     title: "Restoration",
@@ -133,7 +130,7 @@ export default function App() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-black">
           <img 
-            src={heroImage} 
+            src="http://www.martinmotors.co.uk/marty-motors-1.png" 
             alt="Martin Motors Classic VW Campervan" 
             className="w-full h-full object-cover md:object-contain object-center opacity-80"
             referrerPolicy="no-referrer"
@@ -258,7 +255,7 @@ export default function App() {
             <div className="relative">
               <div className="aspect-square rounded-3xl overflow-hidden bg-black/5">
                 <img 
-                  src={aboutImage} 
+                  src="http://www.martinmotors.co.uk/marty-motors-2.png" 
                   alt="Martin Motors Workshop and Services" 
                   className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"

@@ -1,4 +1,4 @@
-name: Deploy to IONOS
+name: Build and Zip for IONOS
 
 on:
   push:
@@ -25,12 +25,8 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Deploy to IONOS via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      - name: Upload Build Artifact (Zip)
+        uses: actions/upload-artifact@v4
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./dist/
-          # Optional: If you need to deploy to a specific folder on IONOS, uncomment and update the line below:
-          # server-dir: /
+          name: martin-motors-website
+          path: ./dist/
